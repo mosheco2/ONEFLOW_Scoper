@@ -48,8 +48,30 @@
             ChevronDown: ({size=20, className}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="m6 9 6 6 6-6"/></svg>,
             LayoutDashboard: ({size=64, className}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>,
             Check: ({size=16, className}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polyline points="20 6 9 17 4 12"/></svg>,
-            Download: ({size=16, className}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+            ClipboardList: ({size=20, className}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>,
+            Trash: ({size=16, className}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>,
+            Plus: ({size=16, className}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>,
+            AlertTriangle: ({size=16, className}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>,
+            Filter: ({size=16, className}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>,
+            ArrowUp: ({size=16, className}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>,
+            ArrowDown: ({size=16, className}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>,
+            Download: ({size=16, className}) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         };
+
+        // --- PREDEFINED USERS ---
+        const PREDEFINED_USERS = [
+            'לקוח אנונימי',
+            'לקוח רשום',
+            'סוכן מכירות',
+            'מנהל דיגיטל',
+            'מנהל מערכת',
+            'מלקט',
+            'מנהל מחסן',
+            'נהג',
+            'מנהל שילוח',
+            'מנהל שיווק',
+            'מנהל חשבונות'
+        ];
 
         // --- SYSTEM DATA ---
         const SYSTEM_DATA = {
@@ -366,17 +388,19 @@
           const [businessType, setBusinessType] = useState('B2B'); // B2B | B2C
           const [selectedFeatures, setSelectedFeatures] = useState(new Set());
           const [viewMode, setViewMode] = useState('SOW'); // SOW | TECH
+          const [filterMode, setFilterMode] = useState('ALL'); // ALL | STANDARD | CUSTOM
           const [expandedModules, setExpandedModules] = useState({});
           
-          // New State for Client Details
-          const [clientName, setClientName] = useState('');
-          const [projectDate, setProjectDate] = useState(new Date().toISOString().split('T')[0]);
+          // Custom Processes State
+          const [rawTopics, setRawTopics] = useState('');
+          const [customTopics, setCustomTopics] = useState([]);
 
           // Init expanded state
           useEffect(() => {
               const initialExpanded = {};
               SYSTEM_DATA.B2B.forEach(m => initialExpanded[m.id] = true);
               SYSTEM_DATA.B2C.forEach(m => initialExpanded[m.id] = true);
+              initialExpanded['custom_processes'] = true; // Open the custom processes accordion by default
               setExpandedModules(initialExpanded);
           }, []);
 
@@ -393,7 +417,6 @@
               nextSelected.delete(featureId);
             } else {
               nextSelected.add(featureId);
-              // Remove conflicts
               if (conflicts && conflicts.length > 0) {
                 conflicts.forEach(conflictId => nextSelected.delete(conflictId));
               }
@@ -408,22 +431,114 @@
             }));
           };
 
+          // --- Custom Processes Handlers ---
+          const handleAddTopics = () => {
+            const topics = rawTopics.split('\n').map(t => t.trim()).filter(t => t);
+            if (topics.length === 0) return;
+
+            const newTopics = topics.map((t, i) => ({
+                id: `topic_${Date.now()}_${i}`,
+                title: t,
+                rows: [
+                    {
+                        id: `row_${Date.now()}_${i}_0`,
+                        user: '',
+                        action: '',
+                        apiEndpoint: '',
+                        current: '',
+                        desired: '',
+                        notes: '',
+                        isCustom: false,
+                        isCore: false,
+                        isHighEffort: false
+                    }
+                ]
+            }));
+
+            setCustomTopics([...customTopics, ...newTopics]);
+            setRawTopics('');
+          };
+
+          const handleTopicUpdate = (topicId, newTitle) => {
+              setCustomTopics(prev => prev.map(t => t.id === topicId ? { ...t, title: newTitle } : t));
+          };
+
+          const handleAddRow = (topicId) => {
+              setCustomTopics(prev => prev.map(t => {
+                  if (t.id === topicId) {
+                      return {
+                          ...t,
+                          rows: [...t.rows, {
+                              id: `row_${Date.now()}_${Math.random()}`,
+                              user: '',
+                              action: '',
+                              apiEndpoint: '',
+                              current: '',
+                              desired: '',
+                              notes: '',
+                              isCustom: false,
+                              isCore: false,
+                              isHighEffort: false
+                          }]
+                      };
+                  }
+                  return t;
+              }));
+          };
+
+          const handleRowUpdate = (topicId, rowId, field, value) => {
+              setCustomTopics(prev => prev.map(t => {
+                  if (t.id === topicId) {
+                      return {
+                          ...t,
+                          rows: t.rows.map(r => r.id === rowId ? { ...r, [field]: value } : r)
+                      };
+                  }
+                  return t;
+              }));
+          };
+
+          const handleRemoveRow = (topicId, rowId) => {
+              setCustomTopics(prev => prev.map(t => {
+                  if (t.id === topicId) {
+                      return { ...t, rows: t.rows.filter(r => r.id !== rowId) };
+                  }
+                  return t;
+              }).filter(t => t.rows.length > 0)); // Remove topic entirely if no rows left
+          };
+
+          const handleMoveRow = (topicId, rowIndex, direction) => {
+              setCustomTopics(prev => prev.map(t => {
+                  if (t.id === topicId) {
+                      const newRows = [...t.rows];
+                      if (direction === 'up' && rowIndex > 0) {
+                          [newRows[rowIndex - 1], newRows[rowIndex]] = [newRows[rowIndex], newRows[rowIndex - 1]];
+                      } else if (direction === 'down' && rowIndex < newRows.length - 1) {
+                          [newRows[rowIndex + 1], newRows[rowIndex]] = [newRows[rowIndex], newRows[rowIndex + 1]];
+                      }
+                      return { ...t, rows: newRows };
+                  }
+                  return t;
+              }));
+          };
+
           const currentModules = SYSTEM_DATA[businessType];
 
           const stats = useMemo(() => {
             let complexity = 0;
             let apiCount = 0;
-            let featureCount = 0;
             let selectedList = [];
+            let combinedEndpoints = [];
 
+            // Standard features
             currentModules.forEach(mod => {
               mod.personas.forEach(persona => {
                 persona.features.forEach(feat => {
                   if (selectedFeatures.has(feat.id)) {
                     complexity += feat.complexity;
-                    featureCount++;
                     if (feat.tech && !feat.tech.includes('Middleware') && !feat.tech.includes('Algorithm')) {
                         apiCount++;
+                        combinedEndpoints.push({ id: feat.id, tech: feat.tech, name: feat.name });
                     }
                     selectedList.push({ ...feat, moduleName: mod.name, personaName: persona.name });
                   }
@@ -431,8 +546,38 @@
               });
             });
 
-            return { complexity, apiCount, featureCount, selectedList };
-          }, [selectedFeatures, currentModules]);
+            // Custom rows calculations
+            const allCustomRows = customTopics.flatMap(t => t.rows);
+            
+            allCustomRows.forEach(row => {
+                // Base complexity per custom row
+                let rowComplexity = 2;
+                if (row.isHighEffort) rowComplexity += 10;
+                if (row.isCore) rowComplexity += 3;
+                complexity += rowComplexity;
+
+                // API Endpoint calculation
+                if (row.apiEndpoint && row.apiEndpoint.trim() !== '') {
+                    apiCount++;
+                    combinedEndpoints.push({ id: row.id, tech: row.apiEndpoint, name: row.action || 'תהליך מותאם אישית' });
+                }
+            });
+
+            const totalItems = selectedList.length + allCustomRows.length;
+            const customItemsCount = allCustomRows.filter(r => r.isCustom).length;
+            const customPercent = totalItems > 0 ? (customItemsCount / totalItems) * 100 : 0;
+
+            return { 
+                complexity, 
+                apiCount, 
+                featureCount: selectedList.length, 
+                selectedList,
+                totalItems,
+                customItemsCount,
+                customPercent,
+                combinedEndpoints
+            };
+          }, [selectedFeatures, currentModules, customTopics]);
 
           const complexityLevel = useMemo(() => {
               if (stats.complexity < 15) return { label: 'LOW', color: 'text-green-600', bg: 'bg-green-100' };
@@ -442,12 +587,11 @@
 
           const techSpecJson = useMemo(() => {
               const manifest = {
-                  client: clientName,
-                  date: projectDate,
                   projectType: businessType,
                   modules: [],
                   complexityScore: stats.complexity,
-                  apiEndpoints: []
+                  apiEndpoints: [],
+                  customTopics: customTopics
               };
 
               const moduleMap = {};
@@ -461,40 +605,71 @@
                       name: feat.name,
                       spec: feat.tech
                   });
-                  
-                  if(feat.tech.startsWith('GET') || feat.tech.startsWith('POST') || feat.tech.startsWith('PUT')) {
-                      manifest.apiEndpoints.push(feat.tech);
-                  }
+              });
+              
+              stats.combinedEndpoints.forEach(ep => {
+                  manifest.apiEndpoints.push(ep.tech);
               });
 
               manifest.modules = Object.values(moduleMap);
               return JSON.stringify(manifest, null, 2);
-          }, [stats, businessType, clientName, projectDate]);
+          }, [stats, businessType, customTopics]);
+
+          const isExceedingCustomPercent = stats.customPercent > 5;
 
           // --- EXPORT TO EXCEL (CSV) ---
           const handleExportExcel = () => {
-              // CSV Headers
-              const headers = ['מודול', 'פרסונה', 'שם פיצ\'ר', 'תכולה (SOW)', 'מפרט טכני', 'מורכבות', 'Core', 'High Effort'];
               const rows = [];
+              
+              // Helper to escape CSV values
+              const escapeCsv = (val) => {
+                  if (val === null || val === undefined) return '""';
+                  const str = String(val);
+                  return `"${str.replace(/"/g, '""')}"`;
+              };
 
-              // Add Metadata row
-              rows.push([`לקוח: ${clientName}`, `תאריך: ${projectDate}`, `סוג: ${businessType}`, '', '', '', '', '']);
-              rows.push([]); // empty row
-              rows.push(headers);
-
-              // Data Rows
+              // --- Section 1: Standard Features ---
+              rows.push(['חלק א: תכולת מערכת (סטנדרט)']);
+              rows.push(['מודול', 'פרסונה', 'שם פיצ\'ר', 'תכולה (SOW)', 'מפרט טכני', 'מורכבות', 'Core', 'High Effort']);
+              
               stats.selectedList.forEach(item => {
                   rows.push([
-                      `"${item.moduleName}"`,
-                      `"${item.personaName}"`,
-                      `"${item.name}"`,
-                      `"${item.sow.replace(/"/g, '""')}"`, // Escape quotes for CSV
-                      `"${item.tech}"`,
+                      escapeCsv(item.moduleName),
+                      escapeCsv(item.personaName),
+                      escapeCsv(item.name),
+                      escapeCsv(item.sow),
+                      escapeCsv(item.tech),
                       item.complexity,
                       item.core ? 'כן' : 'לא',
                       item.highEffort ? 'כן' : 'לא'
                   ]);
               });
+
+              rows.push([]);
+              rows.push([]);
+
+              // --- Section 2: Custom Processes ---
+              if (customTopics.length > 0) {
+                  rows.push(['חלק ב: ניתוח תהליכים (Gap Analysis)']);
+                  rows.push(['נושא התהליך', 'משתמש', 'פעולה (מה קורה)', 'ממשק API', 'מצב מצוי', 'מצב רצוי', 'הערות', 'סוג תכולה', 'Core', 'High Effort']);
+                  
+                  customTopics.forEach(topic => {
+                      topic.rows.forEach(row => {
+                          rows.push([
+                              escapeCsv(topic.title || 'נושא ללא שם'),
+                              escapeCsv(row.user),
+                              escapeCsv(row.action),
+                              escapeCsv(row.apiEndpoint),
+                              escapeCsv(row.current),
+                              escapeCsv(row.desired),
+                              escapeCsv(row.notes),
+                              row.isCustom ? 'התאמה אישית' : 'מובנה במוצר',
+                              row.isCore ? 'כן' : 'לא',
+                              row.isHighEffort ? 'כן' : 'לא'
+                          ]);
+                      });
+                  });
+              }
 
               // Add BOM for Hebrew support in Excel
               const BOM = '\uFEFF';
@@ -505,8 +680,8 @@
               const url = URL.createObjectURL(blob);
               const link = document.createElement('a');
               link.href = url;
-              const safeName = clientName ? clientName.replace(/[^a-z0-9א-ת]/gi, '_') : 'Draft';
-              link.setAttribute('download', `ONEFLOW_Scope_${safeName}_${projectDate}.csv`);
+              const dateStr = new Date().toISOString().split('T')[0];
+              link.setAttribute('download', `ONEFLOW_Scoper_Export_${dateStr}.csv`);
               document.body.appendChild(link);
               link.click();
               document.body.removeChild(link);
@@ -546,36 +721,6 @@
                     
                     {/* Top Config Controls */}
                     <div className="p-6 border-b border-slate-100 bg-white">
-                        
-                        {/* New: Client Details Inputs */}
-                        <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm mb-4">
-                            <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
-                                <Icons.FileText size={14} />
-                                פרטי פרויקט
-                            </h3>
-                            <div className="grid grid-cols-2 gap-3">
-                                <div>
-                                    <label className="block text-xs font-medium text-slate-700 mb-1">שם הלקוח</label>
-                                    <input 
-                                        type="text" 
-                                        value={clientName}
-                                        onChange={(e) => setClientName(e.target.value)}
-                                        className="w-full p-2 text-sm border border-slate-300 rounded focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-colors"
-                                        placeholder="הזן שם לקוח..."
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block text-xs font-medium text-slate-700 mb-1">תאריך אפיון</label>
-                                    <input 
-                                        type="date" 
-                                        value={projectDate}
-                                        onChange={(e) => setProjectDate(e.target.value)}
-                                        className="w-full p-2 text-sm border border-slate-300 rounded focus:border-cyan-500 outline-none"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-
                         <h2 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-3">סוג פעילות</h2>
                         <div className="flex gap-3">
                             {['B2B', 'B2C'].map(type => (
@@ -597,6 +742,204 @@
 
                     {/* Modules List */}
                     <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-50/50">
+                        
+                        {/* Custom Processes Accordion (NEW) */}
+                        <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden mb-4 border-t-4 border-t-purple-500">
+                            <button 
+                                onClick={() => toggleModule('custom_processes')}
+                                className="w-full flex items-center justify-between p-4 bg-white hover:bg-slate-50 transition-colors"
+                            >
+                                <div className="flex items-center gap-3">
+                                    <div className="p-2 rounded-lg bg-purple-100 text-purple-700">
+                                        <Icons.ClipboardList size={20} />
+                                    </div>
+                                    <div className="text-right">
+                                        <span className="block font-bold text-slate-800">ניהול תהליכים (Gap Analysis)</span>
+                                        {customTopics.length > 0 && (
+                                            <span className="text-xs text-purple-600 font-medium">{customTopics.length} נושאים מוגדרים</span>
+                                        )}
+                                    </div>
+                                </div>
+                                <Icons.ChevronDown size={20} className={`text-slate-400 transition-transform ${expandedModules['custom_processes'] ? 'rotate-180' : ''}`} />
+                            </button>
+
+                            {expandedModules['custom_processes'] && (
+                                <div className="border-t border-slate-100 p-4 bg-slate-50">
+                                    {/* Textarea for Bulk Entry */}
+                                    <div className="mb-6 bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+                                        <label className="block text-sm font-bold text-slate-700 mb-2">טעינת רשימת נושאים חופשית</label>
+                                        <p className="text-xs text-slate-500 mb-3">הזן נושאים או תהליכים מבוקשים (כל נושא בשורה חדשה) כדי לייצר עבורם תבנית אפיון למילוי.</p>
+                                        <textarea
+                                            value={rawTopics}
+                                            onChange={(e) => setRawTopics(e.target.value)}
+                                            className="w-full p-3 border border-slate-300 rounded focus:border-purple-500 focus:ring-1 focus:ring-purple-500 outline-none mb-3 text-sm h-20 resize-none"
+                                            placeholder="לדוגמה:&#10;תהליך קליטת סוכן חדש בשטח&#10;אישור חריגות באשראי לקוח"
+                                        />
+                                        <button 
+                                            onClick={handleAddTopics}
+                                            className="w-full py-2 bg-purple-600 text-white text-sm font-bold rounded hover:bg-purple-700 transition-colors"
+                                        >
+                                            טען נושאים לתבניות תהליך
+                                        </button>
+                                    </div>
+
+                                    {/* Render Custom Topics & Rows */}
+                                    <div className="space-y-6">
+                                        {customTopics.map((topic) => (
+                                            <div key={topic.id} className="bg-purple-50/50 p-4 rounded-xl border border-purple-100 shadow-sm">
+                                                {/* Editable Topic Title */}
+                                                <div className="flex items-center gap-2 mb-4 pr-2 border-r-4 border-purple-500">
+                                                    <input
+                                                        type="text"
+                                                        value={topic.title}
+                                                        onChange={(e) => handleTopicUpdate(topic.id, e.target.value)}
+                                                        className="flex-1 font-black text-lg text-purple-900 bg-transparent border-b border-transparent focus:border-purple-300 outline-none transition-colors px-1"
+                                                        placeholder="שם הנושא / התהליך..."
+                                                    />
+                                                </div>
+                                                
+                                                {/* Rows List */}
+                                                <div className="space-y-3">
+                                                    {topic.rows.map((row, rowIndex) => (
+                                                        <div key={row.id} className="bg-white border border-slate-200 rounded-lg shadow-sm transition-all">
+                                                            {/* Row Header (Type, CORE, HIGH EFFORT, Move Up/Down, Delete) */}
+                                                            <div className="flex justify-between items-center p-2.5 border-b border-slate-100 bg-slate-50 rounded-t-lg">
+                                                                <div className="flex items-center gap-4">
+                                                                    <select 
+                                                                        value={row.isCustom ? 'custom' : 'standard'}
+                                                                        onChange={(e) => handleRowUpdate(topic.id, row.id, 'isCustom', e.target.value === 'custom')}
+                                                                        className={`text-sm font-bold bg-transparent border-none outline-none cursor-pointer focus:ring-0 ${row.isCustom ? 'text-red-700' : 'text-slate-800'}`}
+                                                                    >
+                                                                        <option value="standard">מובנה במערכת (Standard)</option>
+                                                                        <option value="custom">התאמה אישית (Custom Gap)</option>
+                                                                    </select>
+                                                                    <div className="w-px h-4 bg-slate-300"></div>
+                                                                    <label className="flex items-center gap-1.5 cursor-pointer hover:opacity-80 transition-opacity">
+                                                                        <input 
+                                                                            type="checkbox" 
+                                                                            checked={row.isCore} 
+                                                                            onChange={(e) => handleRowUpdate(topic.id, row.id, 'isCore', e.target.checked)} 
+                                                                            className="w-3.5 h-3.5 text-slate-800 rounded border-slate-300 focus:ring-slate-800" 
+                                                                        />
+                                                                        <span className="text-[10px] bg-slate-800 text-white px-1.5 py-0.5 rounded font-bold tracking-wide">CORE</span>
+                                                                    </label>
+                                                                    <label className="flex items-center gap-1.5 cursor-pointer hover:opacity-80 transition-opacity">
+                                                                        <input 
+                                                                            type="checkbox" 
+                                                                            checked={row.isHighEffort} 
+                                                                            onChange={(e) => handleRowUpdate(topic.id, row.id, 'isHighEffort', e.target.checked)} 
+                                                                            className="w-3.5 h-3.5 text-amber-500 rounded border-slate-300 focus:ring-amber-500" 
+                                                                        />
+                                                                        <span className="text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-bold tracking-wide border border-amber-200">HIGH EFFORT</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div className="flex items-center gap-1.5">
+                                                                    <button 
+                                                                        onClick={() => handleMoveRow(topic.id, rowIndex, 'up')} 
+                                                                        disabled={rowIndex === 0}
+                                                                        className={`p-1 rounded ${rowIndex === 0 ? 'text-slate-300 cursor-not-allowed' : 'text-slate-500 hover:bg-slate-200 hover:text-slate-800'} transition-colors`}
+                                                                        title="הזז למעלה"
+                                                                    >
+                                                                        <Icons.ArrowUp size={16} />
+                                                                    </button>
+                                                                    <button 
+                                                                        onClick={() => handleMoveRow(topic.id, rowIndex, 'down')} 
+                                                                        disabled={rowIndex === topic.rows.length - 1}
+                                                                        className={`p-1 rounded ${rowIndex === topic.rows.length - 1 ? 'text-slate-300 cursor-not-allowed' : 'text-slate-500 hover:bg-slate-200 hover:text-slate-800'} transition-colors`}
+                                                                        title="הזז למטה"
+                                                                    >
+                                                                        <Icons.ArrowDown size={16} />
+                                                                    </button>
+                                                                    <div className="w-px h-4 bg-slate-300 mx-1"></div>
+                                                                    <button 
+                                                                        onClick={() => handleRemoveRow(topic.id, row.id)} 
+                                                                        className="p-1 rounded text-slate-400 hover:bg-red-50 hover:text-red-500 transition-colors" 
+                                                                        title="הסר שורה"
+                                                                    >
+                                                                        <Icons.Trash size={16} />
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+
+                                                            {/* Row Inputs (5 Columns Grid) */}
+                                                            <div className="p-3 grid grid-cols-12 gap-3">
+                                                                <div className="col-span-12 md:col-span-3">
+                                                                    <label className="block text-xs font-bold text-slate-500 mb-1">משתמש</label>
+                                                                    <select 
+                                                                        value={row.user} 
+                                                                        onChange={(e) => handleRowUpdate(topic.id, row.id, 'user', e.target.value)} 
+                                                                        className="w-full p-2 border border-slate-200 rounded text-sm outline-none focus:border-purple-500 bg-slate-50 focus:bg-white"
+                                                                    >
+                                                                        <option value="" disabled>בחר תפקיד...</option>
+                                                                        {PREDEFINED_USERS.map(u => <option key={u} value={u}>{u}</option>)}
+                                                                    </select>
+                                                                </div>
+                                                                <div className="col-span-12 md:col-span-6">
+                                                                    <label className="block text-xs font-bold text-slate-500 mb-1">פעולה (מה קורה?)</label>
+                                                                    <input 
+                                                                        type="text" 
+                                                                        value={row.action} 
+                                                                        onChange={(e) => handleRowUpdate(topic.id, row.id, 'action', e.target.value)} 
+                                                                        className="w-full p-2 border border-slate-200 rounded text-sm outline-none focus:border-purple-500 bg-slate-50 focus:bg-white" 
+                                                                        placeholder="הזן תיאור פעולה..." 
+                                                                    />
+                                                                </div>
+                                                                <div className="col-span-12 md:col-span-3">
+                                                                    <label className="block text-xs font-bold text-slate-500 mb-1">נתיב ממשק (API Endpoint)</label>
+                                                                    <input 
+                                                                        type="text" 
+                                                                        value={row.apiEndpoint || ''} 
+                                                                        onChange={(e) => handleRowUpdate(topic.id, row.id, 'apiEndpoint', e.target.value)} 
+                                                                        className="w-full p-2 border border-slate-200 rounded text-sm outline-none focus:border-purple-500 bg-slate-50 focus:bg-white font-mono" 
+                                                                        placeholder="לדוגמה: POST /api/..." 
+                                                                    />
+                                                                </div>
+                                                                <div className="col-span-12 md:col-span-4">
+                                                                    <label className="block text-xs font-bold text-slate-500 mb-1">מצב מצוי (כיום)</label>
+                                                                    <textarea 
+                                                                        value={row.current} 
+                                                                        onChange={(e) => handleRowUpdate(topic.id, row.id, 'current', e.target.value)} 
+                                                                        className="w-full p-2 border border-slate-200 rounded text-sm outline-none focus:border-purple-500 h-16 resize-none bg-slate-50 focus:bg-white" 
+                                                                        placeholder="איך מתבצע כיום?" 
+                                                                    />
+                                                                </div>
+                                                                <div className="col-span-12 md:col-span-4">
+                                                                    <label className="block text-xs font-bold text-slate-500 mb-1">מצב רצוי (באפליקציה)</label>
+                                                                    <textarea 
+                                                                        value={row.desired} 
+                                                                        onChange={(e) => handleRowUpdate(topic.id, row.id, 'desired', e.target.value)} 
+                                                                        className="w-full p-2 border border-slate-200 rounded text-sm outline-none focus:border-purple-500 h-16 resize-none bg-slate-50 focus:bg-white" 
+                                                                        placeholder="ההתנהגות הנדרשת..." 
+                                                                    />
+                                                                </div>
+                                                                <div className="col-span-12 md:col-span-4">
+                                                                    <label className="block text-xs font-bold text-slate-500 mb-1">הערות</label>
+                                                                    <textarea 
+                                                                        value={row.notes} 
+                                                                        onChange={(e) => handleRowUpdate(topic.id, row.id, 'notes', e.target.value)} 
+                                                                        className="w-full p-2 border border-slate-200 rounded text-sm outline-none focus:border-purple-500 h-16 resize-none bg-slate-50 focus:bg-white" 
+                                                                        placeholder="ממשקים, תלויות..." 
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+
+                                                <button 
+                                                    onClick={() => handleAddRow(topic.id)} 
+                                                    className="flex items-center gap-2 text-sm font-bold text-purple-600 hover:text-purple-800 mt-3 px-3 py-1.5 rounded-md hover:bg-purple-100/50 transition-colors w-max"
+                                                >
+                                                    <Icons.Plus size={16} /> הוסף שורת תהליך לנושא זה
+                                                </button>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Standard Modules List */}
                         {currentModules.map(module => {
                             const ModuleIcon = module.icon;
                             const isExpanded = expandedModules[module.id];
@@ -607,7 +950,6 @@
 
                             return (
                                 <div key={module.id} className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden mb-4">
-                                    {/* Module Header */}
                                     <button 
                                         onClick={() => toggleModule(module.id)}
                                         className="w-full flex items-center justify-between p-4 bg-white hover:bg-slate-50 transition-colors"
@@ -626,7 +968,6 @@
                                         <Icons.ChevronDown size={20} className={`text-slate-400 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
                                     </button>
 
-                                    {/* Personas & Features */}
                                     {isExpanded && (
                                         <div className="border-t border-slate-100">
                                             {module.personas.map((persona, idx) => (
@@ -684,36 +1025,71 @@
                         <div className="max-w-3xl mx-auto bg-white min-h-[800px] shadow-lg rounded-sm p-12 relative">
                             
                             {/* Placeholder when empty */}
-                            {selectedFeatures.size === 0 && (
+                            {(selectedFeatures.size === 0 && customTopics.length === 0) && (
                                 <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-300 pointer-events-none no-print">
                                     <Icons.LayoutDashboard size={64} className="mb-4 opacity-50" />
-                                    <p className="text-lg font-medium">התחל לסמן מודולים להצגת המסמך</p>
+                                    <p className="text-lg font-medium">התחל לסמן מודולים או תהליכים להצגת המסמך</p>
                                 </div>
                             )}
 
                             {viewMode === 'SOW' ? (
                                 <div className="prose prose-slate max-w-none text-right" dir="rtl">
-                                    {/* SOW Header - Dynamic */}
-                                    <div className="border-b-2 border-slate-900 pb-6 mb-8 break-inside-avoid">
-                                        <div className="flex justify-between items-start">
-                                            <div>
-                                                <h1 className="text-3xl font-black text-slate-900 m-0">נספח תכולה (SOW)</h1>
-                                                <p className="text-slate-500 mt-2 text-lg">פלטפורמת ONEFLOW 360 - אפיון פרויקט {businessType}</p>
-                                            </div>
-                                            <div className="text-left text-sm text-slate-500 bg-slate-50 p-3 rounded border border-slate-100">
-                                                <div className="font-bold text-slate-900 text-base mb-1">{clientName || 'שם הלקוח...'}</div>
-                                                <div className="flex items-center gap-2">
-                                                    <span>{projectDate}</span>
-                                                    <span className="text-xs text-slate-300">|</span>
-                                                    <span>גרסה 2.0</span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    
+                                    {/* SOW Header */}
+                                    <div className="border-b-2 border-slate-900 pb-6 mb-8 relative">
+                                        <h1 className="text-3xl font-black text-slate-900 m-0">נספח תכולה (SOW)</h1>
+                                        <p className="text-slate-500 mt-2 text-lg">פלטפורמת ONEFLOW 360 - אפיון פרויקט {businessType}</p>
                                     </div>
 
-                                    {/* SOW Body */}
-                                    {currentModules.map(module => {
-                                        // Filter selected features for this module
+                                    {/* --- GAUGE METER (Alert for Customizations) --- */}
+                                    {stats.totalItems > 0 && (
+                                        <div className={`p-5 rounded-xl border-2 mb-8 break-inside-avoid no-print ${isExceedingCustomPercent ? 'bg-red-50 border-red-200' : 'bg-slate-50 border-slate-200'}`}>
+                                            <div className="flex justify-between items-end mb-3">
+                                                <div>
+                                                    <h4 className="font-black text-lg mb-1 text-slate-800">מדד התאמות אישיות במערכת</h4>
+                                                    <div className="text-sm font-medium text-slate-500">
+                                                        {stats.customItemsCount} שורות מותאמות אישית מתוך סך של {stats.totalItems} רכיבי תכולה נבחרים
+                                                    </div>
+                                                </div>
+                                                <div className={`text-3xl font-black tracking-tight ${isExceedingCustomPercent ? 'text-red-600' : 'text-slate-800'}`}>
+                                                    {stats.customPercent.toFixed(1)}%
+                                                </div>
+                                            </div>
+                                            <div className="w-full bg-slate-200 h-3 rounded-full overflow-hidden shadow-inner">
+                                                <div 
+                                                    className={`h-full transition-all duration-500 ${isExceedingCustomPercent ? 'bg-red-500' : 'bg-cyan-500'}`} 
+                                                    style={{width: `${Math.min(stats.customPercent, 100)}%`}}>
+                                                </div>
+                                            </div>
+                                            {isExceedingCustomPercent && (
+                                                <div className="mt-3 text-red-600 text-sm font-bold flex items-center gap-2">
+                                                    <Icons.AlertTriangle size={18} />
+                                                    <span>שים לב: אחוז ההתאמות האישיות חורג מהרף המומלץ (5%). הדבר עלול לגרור עלויות פיתוח וזמני הקמה ארוכים.</span>
+                                                </div>
+                                            )}
+                                        </div>
+                                    )}
+
+                                    {/* --- FILTER BUTTONS --- */}
+                                    <div className="flex items-center gap-2 mb-8 bg-slate-100 p-1.5 rounded-lg w-max no-print border border-slate-200">
+                                        <div className="px-2 text-slate-400"><Icons.Filter size={16} /></div>
+                                        <button 
+                                            onClick={() => setFilterMode('ALL')} 
+                                            className={`px-4 py-1.5 text-sm rounded-md font-bold transition-all ${filterMode === 'ALL' ? 'bg-white text-slate-900 shadow' : 'text-slate-500 hover:text-slate-700'}`}
+                                        >הצג הכל</button>
+                                        <button 
+                                            onClick={() => setFilterMode('STANDARD')} 
+                                            className={`px-4 py-1.5 text-sm rounded-md font-bold transition-all ${filterMode === 'STANDARD' ? 'bg-white text-slate-900 shadow' : 'text-slate-500 hover:text-slate-700'}`}
+                                        >סטנדרט בלבד</button>
+                                        <button 
+                                            onClick={() => setFilterMode('CUSTOM')} 
+                                            className={`px-4 py-1.5 text-sm rounded-md font-bold transition-all ${filterMode === 'CUSTOM' ? 'bg-white text-purple-700 shadow ring-1 ring-purple-100' : 'text-slate-500 hover:text-purple-600'}`}
+                                        >התאמות אישיות (Gap)</button>
+                                    </div>
+
+
+                                    {/* Standard SOW Body (Hidden if CUSTOM filter is on) */}
+                                    {filterMode !== 'CUSTOM' && currentModules.map(module => {
                                         const moduleFeatures = [];
                                         module.personas.forEach(p => {
                                             p.features.forEach(f => {
@@ -732,15 +1108,95 @@
                                                 </h3>
                                                 <ul className="space-y-4 list-none p-0">
                                                     {moduleFeatures.map(f => (
-                                                        <li key={f.id} className="bg-slate-50 p-4 rounded-lg border border-slate-100 break-inside-avoid">
-                                                            <span className="block font-bold text-slate-900 mb-1">{f.name}</span>
-                                                            <span className="text-slate-600 leading-relaxed">{f.sow}</span>
+                                                        <li key={f.id} className="bg-slate-50 p-4 rounded-lg border border-slate-100 break-inside-avoid shadow-sm">
+                                                            <div className="flex justify-between items-start mb-1">
+                                                                <span className="block font-bold text-slate-900">{f.name}</span>
+                                                                <span className="text-[10px] bg-slate-200 text-slate-600 px-1.5 py-0.5 rounded font-bold uppercase tracking-wider border border-slate-300">
+                                                                    מובנה במערכת
+                                                                </span>
+                                                            </div>
+                                                            <span className="text-slate-600 leading-relaxed text-sm">{f.sow}</span>
                                                         </li>
                                                     ))}
                                                 </ul>
                                             </div>
                                         );
                                     })}
+
+                                    {/* Custom Processes Tables (Filtered based on view mode) */}
+                                    {customTopics.length > 0 && (
+                                        <div className="mb-8 mt-12 break-inside-avoid">
+                                            {/* We group rows by topic and filter them */}
+                                            {customTopics.map(topic => {
+                                                const visibleRows = topic.rows.filter(r => {
+                                                    if (filterMode === 'STANDARD') return !r.isCustom;
+                                                    if (filterMode === 'CUSTOM') return r.isCustom;
+                                                    return true;
+                                                });
+
+                                                if (visibleRows.length === 0) return null;
+
+                                                return (
+                                                    <div key={topic.id} className="mb-8">
+                                                        <h3 className="text-xl font-black text-purple-700 border-r-4 border-purple-500 pr-3 mb-4">
+                                                            {topic.title || 'נושא ללא שם'}
+                                                        </h3>
+                                                        <div className="overflow-x-auto rounded-lg border border-slate-300 shadow-sm">
+                                                            <table className="w-full text-sm text-right border-collapse m-0">
+                                                                <thead className="bg-slate-100 text-slate-800">
+                                                                    <tr>
+                                                                        <th className="border-b border-l border-slate-300 p-3 font-bold w-1/8">משתמש</th>
+                                                                        <th className="border-b border-l border-slate-300 p-3 font-bold w-1/5">פעולה (API)</th>
+                                                                        <th className="border-b border-l border-slate-300 p-3 font-bold w-1/4">מצב מצוי</th>
+                                                                        <th className="border-b border-l border-slate-300 p-3 font-bold w-1/4">מצב רצוי</th>
+                                                                        <th className="border-b border-slate-300 p-3 font-bold">הערות</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody className="bg-white">
+                                                                    {visibleRows.map((cp) => (
+                                                                        <tr key={cp.id} className="hover:bg-slate-50 transition-colors">
+                                                                            <td className="border-b border-l border-slate-200 p-3 text-slate-700 align-top font-bold bg-slate-50/50">{cp.user}</td>
+                                                                            <td className="border-b border-l border-slate-200 p-3 text-slate-800 align-top">
+                                                                                <span className="block font-bold">{cp.action}</span>
+                                                                                {cp.apiEndpoint && (
+                                                                                    <span className="block mt-1 text-xs text-blue-600 font-mono" dir="ltr">{cp.apiEndpoint}</span>
+                                                                                )}
+                                                                                <div className="flex flex-wrap gap-1 mt-2">
+                                                                                    {cp.isCustom ? (
+                                                                                        <span className="text-[10px] bg-red-100 text-red-700 px-1.5 py-0.5 rounded font-bold border border-red-200">
+                                                                                            התאמה אישית
+                                                                                        </span>
+                                                                                    ) : (
+                                                                                        <span className="text-[10px] bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded font-bold border border-slate-200">
+                                                                                            תכולת סטנדרט
+                                                                                        </span>
+                                                                                    )}
+                                                                                    {cp.isCore && (
+                                                                                        <span className="text-[10px] bg-slate-800 text-white px-1.5 py-0.5 rounded font-bold tracking-wide">
+                                                                                            CORE
+                                                                                        </span>
+                                                                                    )}
+                                                                                    {cp.isHighEffort && (
+                                                                                        <span className="text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-bold tracking-wide border border-amber-200">
+                                                                                            HIGH EFFORT
+                                                                                        </span>
+                                                                                    )}
+                                                                                </div>
+                                                                            </td>
+                                                                            <td className="border-b border-l border-slate-200 p-3 text-slate-600 whitespace-pre-wrap align-top">{cp.current}</td>
+                                                                            <td className="border-b border-l border-slate-200 p-3 text-slate-600 whitespace-pre-wrap align-top">{cp.desired}</td>
+                                                                            <td className="border-b border-slate-200 p-3 text-slate-500 text-xs align-top bg-slate-50/30">{cp.notes}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                );
+                                            })}
+                                        </div>
+                                    )}
+
                                 </div>
                             ) : (
                                 <div className="font-mono text-sm text-left" dir="ltr">
@@ -750,9 +1206,8 @@
                                             <h2 className="text-2xl font-bold text-slate-800">מפרט טכני</h2>
                                             <p className="text-slate-500">System Manifest & API Requirements</p>
                                         </div>
-                                        <div className="text-right">
-                                             <div className="font-bold text-slate-800">{clientName}</div>
-                                             <div className="text-xs text-slate-400">{projectDate}</div>
+                                        <div className="text-xs bg-slate-100 px-2 py-1 rounded border border-slate-200">
+                                            JSON Format
                                         </div>
                                     </div>
 
@@ -761,10 +1216,8 @@
                                         <h4 className="text-slate-400 font-bold uppercase tracking-wider mb-3">Required Endpoints</h4>
                                         {stats.apiCount > 0 ? (
                                             <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
-                                                {stats.selectedList
-                                                    .filter(f => f.tech && !f.tech.includes('Middleware') && !f.tech.includes('Algorithm'))
-                                                    .map(f => (
-                                                        <div key={f.id} className="flex items-center gap-3 mb-2 last:mb-0">
+                                                {stats.combinedEndpoints.map((f, i) => (
+                                                        <div key={f.id + i} className="flex items-center gap-3 mb-2 last:mb-0">
                                                             <span className={`text-xs font-bold px-1.5 py-0.5 rounded ${
                                                                 f.tech.startsWith('GET') ? 'bg-blue-500/20 text-blue-400' : 
                                                                 f.tech.startsWith('POST') ? 'bg-green-500/20 text-green-400' : 'bg-purple-500/20 text-purple-400'
@@ -799,8 +1252,8 @@
                     <div className="bg-white border-t border-slate-200 p-4 shrink-0 flex items-center justify-between shadow-[0_-5px_15px_rgba(0,0,0,0.05)] z-20 no-print">
                         <div className="flex gap-8">
                             <div className="flex flex-col">
-                                <span className="text-xs text-slate-400 font-medium uppercase">פיצ'רים שנבחרו</span>
-                                <span className="text-2xl font-bold text-slate-800 leading-none">{stats.featureCount}</span>
+                                <span className="text-xs text-slate-400 font-medium uppercase">פיצ'רים + תהליכים</span>
+                                <span className="text-2xl font-bold text-slate-800 leading-none">{stats.totalItems}</span>
                             </div>
                             <div className="flex flex-col border-r border-slate-100 pr-8">
                                 <span className="text-xs text-slate-400 font-medium uppercase">ממשקים (API)</span>
@@ -812,7 +1265,7 @@
                             <div className="text-left">
                                 <span className="block text-xs text-slate-400 font-medium uppercase">Complexity Score</span>
                                 <span className={`block text-xl font-black ${complexityLevel.color}`}>
-                                    {stats.complexity} <span className="text-sm font-normal text-slate-400">/ 100</span>
+                                    {stats.complexity} <span className="text-sm font-normal text-slate-400">נק'</span>
                                 </span>
                             </div>
                             <div className={`px-4 py-2 rounded-lg font-bold border-2 ${complexityLevel.bg} ${complexityLevel.color} border-current opacity-80`}>
